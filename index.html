@@ -19,198 +19,200 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#ece1c9;          /* warm sand */
-    --tint:#e3d6b8;        /* deeper sand */
+    --bg:#ece1c9;          /* warm sand canvas */
     --ink:#2a2117;         /* espresso */
     --ink-soft:#6d6048;
-    --line:#d6c5a2;
-    --accent:#3c2f1d;      /* espresso accent */
-    --brass:#9c7b46;       /* muted brass */
+    --line:#d3c19c;
+    --brass:#9c7b46;
     --d1:#231a10;          /* deep espresso */
     --d2:#3c2e1b;
-    --paper:#f3ead4;       /* cream card field */
-    --card:#f7f0de;
+    --card:#f6efdb;        /* cream card */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
   ::selection{background:var(--brass);color:#fff}
-  .container{max-width:740px;margin:0 auto;padding:0 24px}
+  img{display:block;max-width:100%}
+  .container{max-width:1000px;margin:0 auto;padding:0 32px}
 
-  /* ---------- HERO ---------- */
+  /* ===== HERO ===== */
   .hero{
     position:relative;overflow:hidden;color:#f1e6cf;
     background:
-      radial-gradient(125% 90% at 84% 6%, rgba(199,154,82,.30) 0%, rgba(199,154,82,0) 48%),
-      radial-gradient(120% 120% at 8% 102%, rgba(60,46,27,.6) 0%, rgba(60,46,27,0) 55%),
-      linear-gradient(158deg, var(--d2) 0%, var(--d1) 72%);
-    padding:clamp(82px,16vh,160px) 0 clamp(64px,12vh,128px);
+      radial-gradient(120% 90% at 86% 4%, rgba(199,154,82,.32) 0%, rgba(199,154,82,0) 50%),
+      radial-gradient(110% 120% at 6% 104%, rgba(60,46,27,.6) 0%, rgba(60,46,27,0) 55%),
+      linear-gradient(158deg, var(--d2) 0%, var(--d1) 74%);
+    padding:clamp(78px,13vh,138px) 0 clamp(60px,10vh,104px);
   }
   .hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.06;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-  .hero .container{position:relative;z-index:1}
-  .kicker{font-size:13px;letter-spacing:.04em;color:#c6a877;font-weight:500}
-  .hero h1{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.015em;font-size:clamp(48px,10.5vw,92px);line-height:.97;margin:20px 0 0;color:#f6edd9}
+  .hero-inner{position:relative;z-index:1}
+  .hero-text{max-width:600px}
+  .kicker{font-size:13px;letter-spacing:.05em;color:#c6a877;font-weight:500}
+  .hero h1{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.015em;font-size:clamp(48px,10vw,92px);line-height:.96;margin:18px 0 0;color:#f6edd9}
   .hero h1 .nick{font-style:italic;font-weight:300;color:#cfa45e}
-  .hero .tag{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(19px,3.3vw,27px);line-height:1.4;color:#ddccab;max-width:30ch;margin-top:24px}
-  .hero .place{margin-top:28px;font-size:14px;color:#bda983;display:flex;align-items:center;gap:9px}
+  .hero .tag{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(19px,3.2vw,27px);line-height:1.4;color:#ddccab;max-width:28ch;margin-top:22px}
+  .hero .place{margin-top:26px;font-size:14px;color:#bda983;display:flex;align-items:center;gap:9px}
   .hero .place svg{width:15px;height:15px;flex:none}
-  .chev{margin-top:clamp(44px,9vh,84px);color:#8c7850}
-  .chev svg{width:22px;height:22px;animation:bob 2.4s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
-  /* ---------- COLLAGE ---------- */
-  .band{background:var(--d1)}
-  .band figure{max-width:460px;margin:0 auto;padding:clamp(38px,7vw,68px) 24px}
-  .band img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 24px 56px rgba(0,0,0,.45)}
-  .band figcaption{color:#bda07a;font-size:12.5px;text-align:center;margin-top:15px;font-style:italic;font-family:'Fraunces',serif}
+  /* floating, overhanging collage */
+  .collage{margin-top:36px}
+  .collage img{width:100%;max-width:440px;margin:0 auto;border-radius:16px;box-shadow:0 30px 64px rgba(0,0,0,.5);outline:1px solid rgba(255,255,255,.06)}
 
-  /* ---------- SECTIONS ---------- */
-  section.block{padding:clamp(66px,12vw,116px) 0}
-  .story .lead{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(25px,4.6vw,40px);line-height:1.2;letter-spacing:-.012em;margin:0 0 32px;color:var(--ink)}
-  .story p{font-size:clamp(16.5px,2.3vw,18.5px);color:#4a4030;margin-bottom:20px;max-width:62ch}
-  .story p strong{font-weight:600;color:var(--ink)}
+  /* ===== continuous sand canvas ===== */
+  main{position:relative}
+  .block{padding:clamp(58px,9vw,104px) 0}
+  .story{padding-top:clamp(60px,9vw,108px)}
+  .story .lead{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(25px,4.4vw,40px);line-height:1.2;letter-spacing:-.012em;margin:0 0 30px;color:var(--ink);max-width:18ch}
+  .story p{font-size:clamp(16.5px,2.2vw,18.5px);color:#473d2d;margin-bottom:20px;max-width:54ch}
 
-  /* light pull-quote */
-  .quote{background:var(--tint);text-align:center}
-  .quote .mark{font-family:'Fraunces',serif;font-size:64px;line-height:.4;color:var(--brass);opacity:.6;display:block;height:34px}
-  .quote blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(27px,5.2vw,46px);line-height:1.16;letter-spacing:-.012em;color:var(--ink);max-width:18ch;margin:0 auto}
+  /* pull quote: typographic moment, not a colored band */
+  .quote{padding:clamp(40px,7vw,80px) 0}
+  .quote .inner{border-left:3px solid var(--brass);padding-left:clamp(20px,4vw,40px);max-width:760px}
+  .quote blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,5.4vw,52px);line-height:1.12;letter-spacing:-.015em;color:var(--ink)}
   .quote blockquote em{font-style:italic;color:var(--brass)}
 
-  /* ---------- NOW ---------- */
-  .now{background:var(--paper)}
-  .now h2{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(28px,5.4vw,42px);letter-spacing:-.01em;margin:0 0 36px;color:var(--ink)}
-  .card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-  .card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(60,46,27,.16);border-color:#c7af7f}
-  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:8px}
+  /* now / ventures */
+  .now h2,.hello h2{font-family:'Fraunces',serif;font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--ink)}
+  .now h2{font-size:clamp(28px,5vw,42px);margin:0 0 34px}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(60,46,27,.16);border-color:#c7af7f}
+  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:7px}
   .card h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-.01em}
-  .card .tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--brass);font-weight:600;white-space:nowrap}
+  .card .tag{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--brass);font-weight:600;white-space:nowrap}
   .card p{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
   a.card .arr{color:var(--brass);opacity:0;transition:opacity .22s ease;margin-left:6px}
   a.card:hover .arr{opacity:1}
-  .featured{margin-bottom:16px;background:linear-gradient(180deg,var(--card),#efe6d0);border-color:#c7af7f}
+  .featured{margin-bottom:16px}
   .featured h3{font-size:24px}
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-  @media (max-width:600px){.grid{grid-template-columns:1fr}}
+  @media (max-width:620px){.grid{grid-template-columns:1fr}}
 
-  /* ---------- SAY HELLO ---------- */
-  .hello{background:var(--bg);text-align:center}
-  .hello h2{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(26px,5vw,38px);margin:0 0 8px;color:var(--ink)}
-  .hello .sub{color:var(--ink-soft);font-size:15.5px;margin-bottom:30px}
+  /* say hello */
+  .hello{text-align:center;border-top:1px solid var(--line)}
+  .hello h2{font-size:clamp(26px,5vw,38px);margin:0 0 8px}
+  .hello .sub{color:var(--ink-soft);font-size:15.5px;margin-bottom:28px}
   .socials{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .socials a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--accent);font-weight:500;font-size:14.5px;padding:11px 20px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s ease,background .2s ease,color .2s ease,transform .2s ease}
-  .socials a:hover{border-color:var(--brass);background:var(--card);color:var(--brass);transform:translateY(-2px)}
+  .socials a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:500;font-size:14.5px;padding:11px 20px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s ease,background .2s ease,color .2s ease,transform .2s ease}
+  .socials a:hover{border-color:var(--brass);color:var(--brass);transform:translateY(-2px)}
   .socials svg{width:18px;height:18px;flex:none}
 
-  /* ---------- SIGN-OFF ---------- */
-  .signoff{background:var(--paper);text-align:center;padding:clamp(54px,9vw,88px) 0 clamp(40px,7vw,60px)}
-  .sig{width:clamp(230px,46vw,360px);height:auto;color:var(--ink);margin:0 auto;display:block}
+  /* sign-off */
+  .signoff{text-align:center;padding:clamp(48px,8vw,84px) 0 clamp(38px,6vw,56px)}
+  .sig{width:clamp(230px,44vw,350px);height:auto;color:var(--ink);margin:0 auto}
   .sig path,.sig line{stroke:currentColor}
-  footer{font-size:13px;color:var(--ink-soft);margin-top:26px;letter-spacing:.02em}
+  footer{font-size:13px;color:var(--ink-soft);margin-top:24px}
   footer a{color:var(--brass);text-decoration:none}
 
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.chev svg{animation:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* ===== desktop: interlocking, asymmetric layout ===== */
+  @media (min-width:1040px){
+    .hero{padding-bottom:clamp(64px,8vh,96px)}
+    .collage{position:absolute;right:0;bottom:clamp(-210px,-21vh,-250px);width:min(36%,360px);margin:0;z-index:3}
+    .collage img{max-width:none;margin:0}
+    .story{padding-top:clamp(86px,11vw,128px)}
+    .story .lead,.story p{max-width:520px}   /* text holds the left; photo overhangs top-right into this section */
+  }
 </style>
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="container">
-      <span class="kicker">Operator &nbsp;&middot;&nbsp; Aviator &nbsp;&middot;&nbsp; Mariner</span>
-      <h1>Ryan <span class="nick">&ldquo;Gus&rdquo;</span> Roberts</h1>
-      <p class="tag">I find what&rsquo;s about to break in a business, before it does.</p>
-      <div class="place">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        Sint Maarten, Caribbean
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="kicker">Operator &nbsp;&middot;&nbsp; Aviator &nbsp;&middot;&nbsp; Mariner</span>
+        <h1>Ryan <span class="nick">&ldquo;Gus&rdquo;</span> Roberts</h1>
+        <p class="tag">I find what&rsquo;s about to break in a business, before it does.</p>
+        <div class="place">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Sint Maarten, Caribbean
+        </div>
       </div>
-      <div class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+      <figure class="collage">
+        <img src="collage.jpg" alt="Ryan Roberts: fighter pilot, sailing the Caribbean, and at work today"
+             onerror="this.closest('.collage').style.display='none';">
+      </figure>
     </div>
   </header>
 
-  <!-- COLLAGE -->
-  <div class="band">
-    <figure>
-      <img src="collage.jpg" alt="Ryan Roberts: fighter pilot, sailing the Caribbean, and at work today"
-           onerror="this.closest('.band').style.display='none';">
-    </figure>
-  </div>
+  <main>
+    <!-- STORY -->
+    <section class="block story reveal">
+      <div class="container">
+        <p class="lead">I think of businesses the way I once thought of aircraft and weapons systems.</p>
+        <p>They fail in patterns, and the patterns are foreseeable. I spent twenty years flying for the Air Force, then led teams that modeled systems risk for the Department of Defense alongside the largest defense primes.</p>
+        <p>After the service I built and sold a defense contracting firm, most of it while living on a sailboat in the Caribbean and raising my daughter across thirteen countries. Same engineering discipline, different arena. Now I help founders and acquirers see where the structure won&rsquo;t hold, and shore it up before the weight arrives.</p>
+      </div>
+    </section>
 
-  <!-- STORY -->
-  <section class="block story reveal">
-    <div class="container">
-      <p class="lead">I think of businesses the way I once thought of aircraft and weapons systems. They fail in patterns, and the patterns are foreseeable.</p>
-      <p>I spent twenty years flying for the Air Force, then led teams that modeled systems risk for the Department of Defense alongside the largest defense primes. After the service I built and sold a defense contracting firm, most of it while living on a sailboat in the Caribbean and raising my daughter across thirteen countries.</p>
-      <p>Same engineering discipline, different arena. These days I help founders and acquirers see where the structure won&rsquo;t hold, and shore it up before the weight arrives.</p>
-    </div>
-  </section>
-
-  <!-- PULL QUOTE -->
-  <section class="block quote reveal">
-    <div class="container">
-      <span class="mark">&ldquo;</span>
-      <blockquote>Freedom isn&rsquo;t wished for. <em>It&rsquo;s engineered.</em></blockquote>
-    </div>
-  </section>
-
-  <!-- NOW -->
-  <section class="block now">
-    <div class="container">
-      <h2 class="reveal">What I&rsquo;m working on now</h2>
-
-      <a class="card featured reveal" href="https://thesauntergroup.com" target="_blank" rel="noopener">
-        <div class="top"><h3>The Saunter Group <span class="arr">&rarr;</span></h3><span class="tag">Founder</span></div>
-        <p>Diagnostic-led organizational and leadership architecture for operators at scale. Home of the BAIC and LDNA instruments.</p>
-      </a>
-
-      <div class="grid">
-        <div class="card reveal">
-          <div class="top"><h3>Caddix</h3><span class="tag">Strategic Advisor</span></div>
-          <p>Embedded with the founder of a consumer sports-equipment company approaching Series A, on operational architecture and capital readiness.</p>
-        </div>
-        <div class="card reveal">
-          <div class="top"><h3>ShirleyOS</h3><span class="tag">Advisor</span></div>
-          <p>Advising an adaptive AI-infrastructure company building memory-first systems for mission-critical enterprise decisions.</p>
-        </div>
-        <a class="card reveal" href="https://www.vmleader.com" target="_blank" rel="noopener">
-          <div class="top"><h3>Vertical Motion <span class="arr">&rarr;</span></h3><span class="tag">Partner</span></div>
-          <p>Senior executive coach and operational partner at a leadership-development company. I authored its certified coaching program.</p>
-        </a>
-        <div class="card reveal">
-          <div class="top"><h3><em>Architecting Freedom</em></h3><span class="tag">Book</span></div>
-          <p>On why freedom is engineered, not wished for. Drawn from the cockpit, the boat, and two decades of watching systems fail predictably.</p>
+    <!-- PULL QUOTE -->
+    <section class="quote reveal">
+      <div class="container">
+        <div class="inner">
+          <blockquote>Freedom isn&rsquo;t wished for. <em>It&rsquo;s engineered.</em></blockquote>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SAY HELLO -->
-  <section class="block hello reveal">
-    <div class="container">
-      <h2>Say hello</h2>
-      <p class="sub">Always happy to talk shop, sailing, or what&rsquo;s about to break.</p>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/ryan-gus-roberts/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.25h4.9V24H.5zM8.5 8.25h4.7v2.15h.07c.65-1.23 2.25-2.53 4.63-2.53 4.95 0 5.86 3.26 5.86 7.5V24h-4.9v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.5z"/></svg>
-          LinkedIn
+    <!-- NOW -->
+    <section class="block now">
+      <div class="container">
+        <h2 class="reveal">What I&rsquo;m working on now</h2>
+        <a class="card featured reveal" href="https://thesauntergroup.com" target="_blank" rel="noopener">
+          <div class="top"><h3>The Saunter Group <span class="arr">&rarr;</span></h3><span class="tag">Founder</span></div>
+          <p>Diagnostic-led organizational and leadership architecture for operators at scale. Home of the BAIC and LDNA instruments.</p>
         </a>
-        <a href="https://www.instagram.com/ryangusroberts" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-          Instagram
-        </a>
-        <a href="https://www.facebook.com/ryan.roberts.7777" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.6 2.1 15.5 2 14.3 2 11.6 2 9.9 3.6 9.9 6.5v2H7v3.3h2.9V22h3.6v-10.2h2.7l.4-3.3z"/></svg>
-          Facebook
-        </a>
-        <a href="mailto:info@thesauntergroup.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6 9-6"/></svg>
-          Email
-        </a>
+        <div class="grid">
+          <div class="card reveal">
+            <div class="top"><h3>Caddix</h3><span class="tag">Strategic Advisor</span></div>
+            <p>Embedded with the founder of a consumer sports-equipment company approaching Series A, on operational architecture and capital readiness.</p>
+          </div>
+          <div class="card reveal">
+            <div class="top"><h3>ShirleyOS</h3><span class="tag">Advisor</span></div>
+            <p>Advising an adaptive AI-infrastructure company building memory-first systems for mission-critical enterprise decisions.</p>
+          </div>
+          <a class="card reveal" href="https://www.vmleader.com" target="_blank" rel="noopener">
+            <div class="top"><h3>Vertical Motion <span class="arr">&rarr;</span></h3><span class="tag">Partner</span></div>
+            <p>Senior executive coach and operational partner at a leadership-development company. I authored its certified coaching program.</p>
+          </a>
+          <div class="card reveal">
+            <div class="top"><h3><em>Architecting Freedom</em></h3><span class="tag">Book</span></div>
+            <p>On why freedom is engineered, not wished for. Drawn from the cockpit, the boat, and two decades of watching systems fail predictably.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- SAY HELLO -->
+    <section class="block hello reveal">
+      <div class="container">
+        <h2>Say hello</h2>
+        <p class="sub">Always happy to talk shop, sailing, or what&rsquo;s about to break.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/ryan-gus-roberts/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.25h4.9V24H.5zM8.5 8.25h4.7v2.15h.07c.65-1.23 2.25-2.53 4.63-2.53 4.95 0 5.86 3.26 5.86 7.5V24h-4.9v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.5z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.instagram.com/ryangusroberts" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/ryan.roberts.7777" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.6 2.1 15.5 2 14.3 2 11.6 2 9.9 3.6 9.9 6.5v2H7v3.3h2.9V22h3.6v-10.2h2.7l.4-3.3z"/></svg>
+            Facebook
+          </a>
+          <a href="mailto:info@thesauntergroup.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6 9-6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- SIGN-OFF -->
   <div class="signoff reveal">
