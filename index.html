@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan "Gus" Roberts</title>
+<meta name="author" content="Ryan Gus Roberts">
+<meta name="description" content="Ryan &quot;Gus&quot; Roberts. Operator, former fighter pilot, and mariner. Founder of The Saunter Group. Based in Sint Maarten.">
+<meta name="theme-color" content="#06262b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ryan &quot;Gus&quot; Roberts">
+<meta property="og:description" content="Operator, former fighter pilot, and mariner. Founder of The Saunter Group.">
+<meta property="og:url" content="https://gusroberts.net/">
+<meta property="og:image" content="https://gusroberts.net/collage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c5a55'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --tint:#eef7f6;
+    --ink:#0f2429;
+    --ink-soft:#52676a;
+    --line:#dceae8;
+    --accent:#0b5751;      /* deep petrol teal */
+    --accent-2:#15a99c;    /* turquoise */
+    --d1:#04212a;          /* deep ocean */
+    --d2:#093b41;
+    --paper:#f6fbfa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent-2);color:#fff}
+  .container{max-width:740px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:#eafbf8;
+    background:
+      radial-gradient(125% 90% at 84% 6%, rgba(33,196,178,.30) 0%, rgba(33,196,178,0) 46%),
+      radial-gradient(120% 120% at 8% 102%, rgba(8,70,72,.5) 0%, rgba(8,70,72,0) 55%),
+      linear-gradient(158deg, var(--d2) 0%, var(--d1) 72%);
+    padding:clamp(82px,16vh,160px) 0 clamp(64px,12vh,128px);
+  }
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero .container{position:relative;z-index:1}
+  .kicker{font-size:13px;letter-spacing:.04em;color:#8fc4be;font-weight:500}
+  .hero h1{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-.015em;font-size:clamp(48px,10.5vw,92px);line-height:.97;margin:20px 0 0;color:#fff}
+  .hero h1 .nick{font-style:italic;font-weight:300;color:var(--accent-2)}
+  .hero .tag{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(19px,3.3vw,27px);line-height:1.4;color:#cfeae6;max-width:30ch;margin-top:24px}
+  .hero .place{margin-top:28px;font-size:14px;color:#8fc4be;display:flex;align-items:center;gap:9px}
+  .hero .place svg{width:15px;height:15px;flex:none}
+  .chev{margin-top:clamp(44px,9vh,84px);color:#5f928d}
+  .chev svg{width:22px;height:22px;animation:bob 2.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+  /* ---------- COLLAGE ---------- */
+  .band{background:var(--d1)}
+  .band figure{max-width:460px;margin:0 auto;padding:clamp(38px,7vw,68px) 24px}
+  .band img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 24px 56px rgba(0,0,0,.42)}
+  .band figcaption{color:#7fb3ad;font-size:12.5px;text-align:center;margin-top:15px;font-style:italic;font-family:'Fraunces',serif}
+
+  /* ---------- SECTIONS ---------- */
+  section.block{padding:clamp(66px,12vw,116px) 0}
+  .story .lead{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(25px,4.6vw,40px);line-height:1.2;letter-spacing:-.012em;margin:0 0 32px;color:var(--ink)}
+  .story p{font-size:clamp(16.5px,2.3vw,18.5px);color:#33474a;margin-bottom:20px;max-width:62ch}
+  .story p strong{font-weight:600;color:var(--ink)}
+
+  /* light pull-quote (distinct from the firm's dark bands) */
+  .quote{background:var(--tint);text-align:center}
+  .quote .mark{font-family:'Fraunces',serif;font-size:64px;line-height:.4;color:var(--accent-2);opacity:.5;display:block;height:34px}
+  .quote blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(27px,5.2vw,46px);line-height:1.16;letter-spacing:-.012em;color:var(--ink);max-width:18ch;margin:0 auto}
+  .quote blockquote em{font-style:italic;color:var(--accent)}
+
+  /* ---------- NOW ---------- */
+  .now{background:var(--paper)}
+  .now h2{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(28px,5.4vw,42px);letter-spacing:-.01em;margin:0 0 36px;color:var(--ink)}
+  .card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(11,87,81,.12);border-color:#b7ddd7}
+  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:8px}
+  .card h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-.01em}
+  .card .tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-2);font-weight:600;white-space:nowrap}
+  .card p{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+  a.card .arr{color:var(--accent-2);opacity:0;transition:opacity .22s ease;margin-left:6px}
+  a.card:hover .arr{opacity:1}
+  .featured{margin-bottom:16px;background:linear-gradient(180deg,#fff,#f1faf8);border-color:#b7ddd7}
+  .featured h3{font-size:24px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+  /* ---------- SAY HELLO ---------- */
+  .hello{background:#fff;text-align:center}
+  .hello h2{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(26px,5vw,38px);margin:0 0 8px;color:var(--ink)}
+  .hello .sub{color:var(--ink-soft);font-size:15.5px;margin-bottom:30px}
+  .socials{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .socials a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--accent);font-weight:500;font-size:14.5px;padding:11px 20px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s ease,background .2s ease,color .2s ease,transform .2s ease}
+  .socials a:hover{border-color:var(--accent);background:var(--tint);transform:translateY(-2px)}
+  .socials svg{width:18px;height:18px;flex:none}
+
+  /* ---------- SIGN-OFF ---------- */
+  .signoff{background:var(--paper);text-align:center;padding:clamp(54px,9vw,88px) 0 clamp(40px,7vw,60px)}
+  .sig{width:clamp(230px,46vw,360px);height:auto;color:var(--ink);margin:0 auto;display:block}
+  .sig path,.sig line{stroke:currentColor}
+  footer{font-size:13px;color:var(--ink-soft);margin-top:26px;letter-spacing:.02em}
+  footer a{color:var(--accent);text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.chev svg{animation:none}}
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="kicker">Operator &nbsp;&middot;&nbsp; Aviator &nbsp;&middot;&nbsp; Mariner</span>
+      <h1>Ryan <span class="nick">&ldquo;Gus&rdquo;</span> Roberts</h1>
+      <p class="tag">I find what&rsquo;s about to break in a business, before it does.</p>
+      <div class="place">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Sint Maarten, Caribbean
+      </div>
+      <div class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+  </header>
+
+  <!-- COLLAGE -->
+  <div class="band">
+    <figure>
+      <img src="collage.jpg" alt="Ryan Roberts: fighter pilot, sailing the Caribbean, and at work today"
+           onerror="this.closest('.band').style.display='none';">
+      <figcaption>The cockpit. The boat. The Caribbean. The work today.</figcaption>
+    </figure>
+  </div>
+
+  <!-- STORY -->
+  <section class="block story reveal">
+    <div class="container">
+      <p class="lead">I think of businesses the way I once thought of aircraft and weapons systems. They fail in patterns, and the patterns are foreseeable.</p>
+      <p>I spent twenty years flying for the Air Force, then led teams that modeled systems risk for the Department of Defense alongside the largest defense primes. After the service I built and sold a defense contracting firm, most of it while living on a sailboat in the Caribbean and raising my daughter across thirteen countries.</p>
+      <p>Same engineering discipline, different arena. These days I help founders and acquirers see where the structure won&rsquo;t hold, and shore it up before the weight arrives.</p>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="block quote reveal">
+    <div class="container">
+      <span class="mark">&ldquo;</span>
+      <blockquote>Freedom isn&rsquo;t wished for. <em>It&rsquo;s engineered.</em></blockquote>
+    </div>
+  </section>
+
+  <!-- NOW -->
+  <section class="block now">
+    <div class="container">
+      <h2 class="reveal">What I&rsquo;m working on now</h2>
+
+      <a class="card featured reveal" href="https://thesauntergroup.com" target="_blank" rel="noopener">
+        <div class="top"><h3>The Saunter Group <span class="arr">&rarr;</span></h3><span class="tag">Founder</span></div>
+        <p>Diagnostic-led organizational and leadership architecture for operators at scale. Home of the BAIC and LDNA instruments.</p>
+      </a>
+
+      <div class="grid">
+        <div class="card reveal">
+          <div class="top"><h3>Caddix</h3><span class="tag">Strategic Advisor</span></div>
+          <p>Embedded with the founder of a consumer sports-equipment company approaching Series A, on operational architecture and capital readiness.</p>
+        </div>
+        <div class="card reveal">
+          <div class="top"><h3>ShirleyOS</h3><span class="tag">Advisor</span></div>
+          <p>Advising an adaptive AI-infrastructure company building memory-first systems for mission-critical enterprise decisions.</p>
+        </div>
+        <a class="card reveal" href="https://www.vmleader.com" target="_blank" rel="noopener">
+          <div class="top"><h3>Vertical Motion <span class="arr">&rarr;</span></h3><span class="tag">Partner</span></div>
+          <p>Senior executive coach and operational partner at a leadership-development company. I authored its certified coaching program.</p>
+        </a>
+        <div class="card reveal">
+          <div class="top"><h3><em>Architecting Freedom</em></h3><span class="tag">Book</span></div>
+          <p>On why freedom is engineered, not wished for. Drawn from the cockpit, the boat, and two decades of watching systems fail predictably.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAY HELLO -->
+  <section class="block hello reveal">
+    <div class="container">
+      <h2>Say hello</h2>
+      <p class="sub">Always happy to talk shop, sailing, or what&rsquo;s about to break.</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/ryan-gus-roberts/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.25h4.9V24H.5zM8.5 8.25h4.7v2.15h.07c.65-1.23 2.25-2.53 4.63-2.53 4.95 0 5.86 3.26 5.86 7.5V24h-4.9v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V24H8.5z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/ryangusroberts" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/ryan.roberts.7777" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.6 2.1 15.5 2 14.3 2 11.6 2 9.9 3.6 9.9 6.5v2H7v3.3h2.9V22h3.6v-10.2h2.7l.4-3.3z"/></svg>
+          Facebook
+        </a>
+        <a href="mailto:info@thesauntergroup.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6 9-6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGN-OFF -->
+  <div class="signoff reveal">
+    <div class="container">
+      <svg class="sig" viewBox="20 175 690 245" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ryan H. Roberts signature" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+        <line x1="615.71" y1="289.07" x2="677.43" y2="289.07"/>
+        <path d="M507.43,190.29l-95.57,167.14c0,0,25-36.71,72.14-72.43s70.57-22.86,28.29,10.57s-75.14,44.07-75.14,44.07s3,22.07,34.18,13.61S505.18,339,505.18,339s-3.21,10.82,0.96,10.82c4.18,0,9.75-7.93,8.14-9.86c0,0,21.86-4.82,54-38.04c32.14-33.21,43.07-51.86,39.64-53.79c-3.43-1.93-30.86,31.71-47.79,52.71c-16.93,21-35.57,49.36-29.64,50.93c5.93,1.57,12.64-11.93,12.64-11.93s19.36,1.57,27.64-1.79c8.29-3.36,4.79-9.43-2.93-2.14c-7.71,7.29-5.5,16,6.93,9.07s18-11.5,19-10.5s-7.93,12.36-6.14,13.21c1.79,0.86,27.5-16.87,57.79-50.08s36.43-57.92,15.43-33.35s-58.18,80.5-44.68,84.46s38.57-15.96,35.89-18.32c-2.68-2.36-5.79,5.84-5.3,13.34c0.48,7.5-5.3,10.09-7.52,8.34s2.43-2.18,19.89,7.46c17.46,9.64,58.5,18.86,103.29,18.21s59.14-11.79,19.29-12.43c-39.86-0.64-528.07,6.21-528.07,6.21"/>
+        <line x1="444.86" y1="251.57" x2="359.14" y2="408.43"/>
+        <line x1="409.71" y1="196.29" x2="294.86" y2="398.14"/>
+        <path d="M270.11,327.75c-7.5,5.89-18.61,17.25-16.11,18.61s7.64-3.57,9.5-3.5c1.86,0.07,3.71,5.21,12.79,0.29c9.07-4.93,15.21-9.14,15.21-9.14s-7.07,11.36-6,11.86s17.43-14.07,19.57-12.64c2.14,1.43-6.86,15.71-6.86,15.71"/>
+        <path d="M164.29,280.14c-40.57-0.29-132.36,5.07-128.29,15.14c4.07,10.07,76-14.57,119.43-40.57s75.71-53.14,75.71-53.14l-90.57,148.57c0,0,30.57-45.71,75.43-81.14s65.43-20.29,30,13.14s-74.29,42.29-74.29,42.29s1.96,25.93,19.21,26.36c17.25,0.43,36.11-15.11,36.11-15.11s-1.61,8.68,2.32,8.46s17.21-13,17.21-13s-65.07,118.64-54.79,71.5"/>
+      </svg>
+      <footer>
+        Sint Maarten, Caribbean &nbsp;&middot;&nbsp; &copy; <span id="yr">2026</span> Ryan Gus Roberts &nbsp;&middot;&nbsp; <a href="https://thesauntergroup.com" target="_blank" rel="noopener">The Saunter Group</a>
+      </footer>
+    </div>
+  </div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
