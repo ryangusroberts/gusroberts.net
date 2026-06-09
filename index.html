@@ -93,6 +93,11 @@
   .row:hover .body h3{color:var(--c,var(--ink))}
   .row:hover .n{color:var(--c,var(--brass))}
   .row:hover .body h3 .arr{color:var(--c,var(--brass))}
+  /* hover watermark logo, barely-there in the middle of the row */
+  .row{position:relative;overflow:hidden}
+  .row > .n,.row > .body,.row > .tag{position:relative;z-index:1}
+  .wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);max-height:46px;max-width:46%;width:auto;opacity:0;z-index:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease}
+  .row:hover .wm{opacity:.22;transform:translate(-50%,-50%) scale(1)}
   .row .n{font-family:'Fraunces',serif;font-size:15px;color:var(--brass);font-weight:500}
   .row .body h3{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(22px,3vw,30px);
     letter-spacing:-.01em;line-height:1.05}
@@ -183,12 +188,14 @@
         <div class="marker meta"><b>&#47;&#47;</b><span>What I am building now</span></div>
         <div class="index">
           <a class="row" style="--c:#0E1F3D" href="https://thesauntergroup.com" target="_blank" rel="noopener">
+            <img class="wm" src="https://thesauntergroup.com/assets/saunter-logo.svg" alt="" aria-hidden="true" onerror="this.remove()">
             <span class="n">01</span>
             <div class="body"><h3>The Saunter Group <span class="arr">&rarr;</span></h3>
               <p>Diagnostic-led organizational and leadership architecture for operators at scale. Home of the BAIC and LDNA instruments.</p></div>
             <span class="tag">Founder</span>
           </a>
           <a class="row" style="--c:#2C86CC" href="https://www.vmleader.com" target="_blank" rel="noopener">
+            <img class="wm" src="https://images.squarespace-cdn.com/content/v1/67d84861b35dd82387d52220/fd6ec7ef-2c28-4366-a1f0-b31cbc5b2e70/PNG+File+Sans+ECA+Tag.png?format=600w" alt="" aria-hidden="true" onerror="this.remove()">
             <span class="n">02</span>
             <div class="body"><h3>Vertical Motion <span class="arr">&rarr;</span></h3>
               <p>Senior executive coach and operational partner at a leadership-development company. I authored its certified coaching program.</p></div>
