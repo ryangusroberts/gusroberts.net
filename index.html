@@ -141,6 +141,20 @@
     .profile .copy{max-width:520px}
     .profile p{max-width:none}
   }
+    /* --- OneDay Code block --- */
+    .oneday .od-h{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(30px,5vw,48px);line-height:1.04;letter-spacing:-.01em;color:#241C12;margin:.4em 0 .35em;max-width:15ch;}
+    .oneday .od-p{font-size:18px;line-height:1.62;max-width:56ch;color:#3c3220;margin:.6em 0;}
+    .oneday .od-checks{display:flex;gap:8px;margin:26px 0 6px;}
+    .oneday .od-checks i{width:18px;height:18px;border:1.5px solid #9A7434;border-radius:4px;display:inline-block;}
+    .oneday .od-checks i.on{background:#9A7434;}
+    .oneday .od-cap{font-size:12.5px;letter-spacing:.02em;color:#6b5e46;margin-top:6px;}
+    .oneday .od-form{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;max-width:520px;}
+    .oneday .od-form input[type=email]{flex:1;min-width:240px;padding:14px 16px;border:1px solid #cbb98d;border-radius:8px;background:#fffdf6;font:16px 'Inter',system-ui,sans-serif;color:#241C12;}
+    .oneday .od-form input[type=email]:focus{outline:none;border-color:#9A7434;}
+    .oneday .od-form button{padding:14px 24px;border:none;border-radius:8px;background:#241C12;color:#ECE1C9;font:600 14px 'Inter',system-ui,sans-serif;letter-spacing:.04em;cursor:pointer;}
+    .oneday .od-form button:hover{background:#3a2e1c;}
+    .oneday .od-alt{margin-top:16px;font-size:14.5px;color:#6b5e46;}
+    .oneday .od-alt a{color:#9A7434;text-decoration:none;border-bottom:1px solid rgba(154,116,52,.4);}
 </style>
 </head>
 <body>
@@ -220,6 +234,24 @@
             <span class="tag">Book</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ONEDAY -->
+    <section class="sec oneday reveal">
+      <div class="wrap">
+        <div class="marker meta"><b>&#47;&#47;</b><span>Start here</span></div>
+        <h2 class="od-h">Freedom, engineered one day at a time.</h2>
+        <p class="od-p">The OneDay Code is a free daily system I built and still run. Four outputs, three to win. Two or three things that keep you alive. Two questions at night. Simple enough to do every day, which is the only kind of system that lasts.</p>
+        <div class="od-checks" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        <div class="od-cap">Three of four done wins the day.</div>
+        <form class="od-form" action="https://formspree.io/f/xwvglykn" method="post">
+          <input type="email" name="email" placeholder="Your email" required>
+          <input type="hidden" name="_subject" value="New OneDay Code signup">
+          <input type="hidden" name="_next" value="https://gusroberts.net/oneday.html">
+          <button type="submit">Send me the card</button>
+        </form>
+        <div class="od-alt"><a href="/oneday.html">Open the tool</a> or <a href="/oneday-code-card.pdf">download the printable card</a>.</div>
       </div>
     </section>
 
