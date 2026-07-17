@@ -155,6 +155,14 @@
     .oneday .od-form button:hover{background:#3a2e1c;}
     .oneday .od-alt{margin-top:16px;font-size:14.5px;color:#6b5e46;}
     .oneday .od-alt a{color:#9A7434;text-decoration:none;border-bottom:1px solid rgba(154,116,52,.4);}
+    .oneday .od-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 32px;}
+    .oneday .od-btn{display:inline-block;padding:12px 22px;border-radius:8px;background:#241C12;color:#ECE1C9;font:600 14px 'Inter',system-ui,sans-serif;letter-spacing:.02em;text-decoration:none;border:1px solid #241C12;}
+    .oneday .od-btn:hover{background:#3a2e1c;}
+    .oneday .od-btn.ghost{background:transparent;color:#241C12;}
+    .oneday .od-btn.ghost:hover{background:rgba(36,28,18,.06);}
+    .oneday .od-sub{border-top:1px solid rgba(36,28,18,.14);padding-top:22px;max-width:560px;}
+    .oneday .od-subhead{font-size:15.5px;line-height:1.55;color:#3c3220;margin:0 0 14px;}
+    .oneday .od-subhead em{font-style:italic;}
 </style>
 </head>
 <body>
@@ -242,16 +250,20 @@
       <div class="wrap">
         <div class="marker meta"><b>&#47;&#47;</b><span>Start here</span></div>
         <h2 class="od-h">Freedom, engineered one day at a time.</h2>
-        <p class="od-p">The OneDay Code is a free daily system I built and still run. Four outputs, three to win. Two or three things that keep you alive. Two questions at night. Simple enough to do every day, which is the only kind of system that lasts.</p>
-        <div class="od-checks" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
-        <div class="od-cap">Three of four done wins the day.</div>
-        <form class="od-form" action="https://formspree.io/f/xwvglykn" method="post">
-          <input type="email" name="email" placeholder="Your email" required>
-          <input type="hidden" name="_subject" value="New OneDay Code signup">
-          <input type="hidden" name="_next" value="https://gusroberts.net/oneday.html">
-          <button type="submit">Send me the card</button>
-        </form>
-        <div class="od-alt"><a href="/oneday.html">Open the tool</a> or <a href="/oneday-code-card.pdf">download the printable card</a>.</div>
+        <p class="od-p">The OneDay Code is a free daily system I built and still run: four outputs, three to win, two or three things that keep you alive, two questions at night. Open it or print it, no strings.</p>
+        <div class="od-actions">
+          <a class="od-btn" href="/oneday.html">Open the tool</a>
+          <a class="od-btn ghost" href="/oneday-code-card.pdf">Print the card</a>
+        </div>
+        <div class="od-sub">
+          <p class="od-subhead">Once a month I write <em>Architecting Freedom</em>: a short note that connects these ideas from your day all the way up to your whole company. No spam, just the through-line.</p>
+          <form class="od-form" action="https://formspree.io/f/xwvglykn" method="post">
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="hidden" name="_subject" value="New Architecting Freedom subscriber">
+            <input type="hidden" name="_next" value="https://gusroberts.net/oneday.html">
+            <button type="submit">Send me the notes</button>
+          </form>
+        </div>
       </div>
     </section>
 
